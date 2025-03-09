@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>fileTypes</key>
+    <array>
+        <string>str</string>
+    </array>
+
+    <key>name</key>
+    <string>str</string>
+
+    <key>patterns</key>
+    <array>
+        <!--Comments-->
+        <dict>
+            <key>match</key>
+            <string>//.*$</string>
+
+            <key>name</key>
+            <string>comment.line.double-slash.c4d_string</string>
+        </dict>
+        
+        <!--STRINGTABLE keyword-->
+        <dict>
+            <key>match</key>
+            <string>\b(STRINGTABLE)\b</string>
+
+            <key>name</key>
+            <string>keyword.control.c4d_string</string>
+        </dict>
+        
+        <!--String in double quotes-->
+        <dict>
+            <key>begin</key>
+            <string>"</string>
+
+            <key>end</key>
+            <string>"</string>
+
+            <key>name</key>
+            <string>string.quoted.double.c4d_string</string>
+
+            <key>patterns</key>
+            <array>
+                <dict>
+                    <key>match</key>
+                    <string>\\.</string>
+                    <key>name</key>
+                    <string>constant.character.escape.c4d_string</string>
+                </dict>
+            </array>
+        </dict>
+        
+        <!--Semicolons-->
+        <dict>
+            <key>match</key>
+            <string>;</string>
+
+            <key>name</key>
+            <string>punctuation.terminator.c4d_string</string>
+        </dict>
+        
+        <!--Curly braces-->
+        <dict>
+            <key>match</key>
+            <string>\{|\}</string>
+
+            <key>name</key>
+            <string>punctuation.section.braces.c4d_string</string>
+        </dict>
+    </array>
+
+    <key>scopeName</key>
+    <string>source.c4d_string</string>
+    
+    <key>uuid</key>
+    <string>de46e0fc-82fd-4a10-a11c-6c92f5bc0978</string>
+</dict>
+</plist>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>fileTypes</key>
+  <array>
+    <string>res</string>
+  </array>
+
+  <key>name</key>
+  <string>res</string>
+
+  <key>patterns</key>
+  <array>
+
+    <!--Keywords-->
+    <dict>
+      <key>match</key>
+      <string>\b(CONTAINER|GROUP|NAME|INCLUDE|ID|ACCEPT|CYCLE|LONG|LINK|SHADERLINK|REAL|STATICTEXT|SPLINE|VECTOR|SEPARATOR|JOINENDSCALE|UNIT|MIN|MAX|MAXSLIDER|STEP|CUSTOMGUI|MINSLIDER|SCALE_H|ACCEPT|DEFAULT|COLUMNS|LINE|HIDDEN|BOOL|COLOR|BASETIME|BUTTON)\b</string>
+
+      <key>name</key>
+      <string>keyword.control.c4d_res</string>
+    </dict>
+
+    <!--Comments-->
+    <dict>
+      <key>match</key>
+      <string>//.*$</string>
+
+      <key>name</key>
+      <string>comment.line.double-slash.c4d_res</string>
+    </dict>
+
+    
+    <!--Curly braces-->
+    <dict>
+      <key>match</key>
+      <string>\{|\}</string>
+
+      <key>name</key>
+      <string>punctuation.section.braces.c4d_string</string>
+    </dict>
+
+    <!--Numbers-->
+    <dict>
+      <key>match</key>
+      <string>\b(([0-9]+(\.[0-9]+)?)|(\.[0-9]+))([eE][+-]?[0-9]+)?\b</string>
+
+      <key>name</key>
+      <string>constant.numeric.custom</string>
+    </dict>
+
+  </array>
+
+  <key>scopeName</key>
+  <string>source.c4d_res</string>
+
+  <key>uuid</key>
+  <string>1f226b4b-948d-4fe2-9c8b-86c0b74eaa24</string>
+</dict>
+</plist>
